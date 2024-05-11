@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The UW Dawgcast</title>
+    <style>
+        /* Add some basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8e3d3; /* gold */
+        }
+        header {
+            background-color: #32006e; /* purple */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: dropAnimation 5s linear infinite;
+        }
+        @keyframes dropAnimation {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 40px 40px;
+            }
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        nav {
+            background-color: #32006e; /* purple */
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #e8e3d3;
+            color: #32006e;
+        }
+        nav a.active {
+            background-color: #e8e3d3;
+            color: #32006e;
+        }
+        main section {
+            padding: 40px;
+            display: none;
+        }
+        #home {
+            display: block;
+        }
+        footer {
+            background-color: #e8e3d3; /* gold */
+            padding: 10px;
+            text-align: center;
+        }
+        #forecast-page {
+            text-align: center;
+        }
+        #forecast-page img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .join-button {
+            display: inline-block;
+            background-color: #32006e; /* purple */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+        .join-button:hover {
+            background-color: #e8e3d3;
+            color: #32006e;
+        }
+        /* Style for the video */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Adjust as needed */
+            margin: 0 auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .video-container video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Welcome to The UW Dawgcast</h1>
+</header>
+<nav>
+    <a href="#" id="home-link" class="active">Home</a>
+    <a href="#" id="about-link">About</a>
+    <a href="#" id="meteorology-link">Meteorology</a>
+    <a href="#" id="join-link">Join</a>
+    <a href="#" id="forecast-link">Forecast</a>
+</nav>
+<main>
+    <section id="home">
+        <h2>Ready to Unleash Your Meteorological Passion?</h2>
+        <p>The UW Dawgcast is a unique opportunity for students to gain real-world experience in broadcast meteorology.</p>
+        <ul>
+            <li>Learn from experienced meteorologists and broadcasters</li>
+            <li>Practice forecasting and on-air presentation skills</li>
+            <li>Use professional-grade equipment and software</li>
+            <li>Collaborate with fellow weather enthusiasts</li>
+            <li>Participate in exciting field trips and events</li>
+        </ul>
+        <p>Don't miss out on this incredible experience! Join The UW Dawgcast today and take your passion for weather to new heights.</p>
+
+        <!-- Video container -->
+        <div class="video-container">
+            <video controls loop>
+                <source src="HW2GenAIVideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About The UW Dawgcast</h2>
+        <p>The UW Dawgcast is a student-led organization at the University of Washington dedicated to providing accurate weather forecasts and promoting interest in meteorology among students.</p>
+        <p>We aim to foster a community of weather enthusiasts who are passionate about learning and sharing their knowledge with others.</p>
+    </section>
+    <section id="meteorology">
+        <h2>Meteorology</h2>
+        <p>The UW Dawgcast operates in collaboration with the academic course ATM S 493: Media & Meteorology. This course offers students the opportunity to learn about broadcast meteorology and gain hands-on experience in communicating weather information to the public.</p>
+        <p>Through engaging lectures, practical exercises, and guest speaker sessions, students develop the skills and confidence needed to excel in the field of meteorology and broadcasting.</p>
+    </section>
+    <section id="join">
+        <h2>Join The UW Dawgcast Club</h2>
+        <p>Whether you're a meteorology major or simply have a passion for weather, The UW Dawgcast welcomes students from all backgrounds to join our club!</p>
+        <p>As a member, you'll have the opportunity to participate in forecasting activities, attend guest lectures, and connect with like-minded individuals who share your enthusiasm for meteorology.</p>
+        <a href="https://sites.uw.edu/theuwdawgcast/"
+            target="_blank" class="join-button">Join Now</a>
+                </section>
+                <section id="forecast">
+                    <h2>5-Day Forecast</h2>
+                    <img src="HW2GenAIImage1.jpg" alt="Forecast Image">
+                    <p>Stay tuned for the latest weather updates from The UW Dawgcast!</p>
+                </section>
+            </main>
+            <footer>
+                <p>&copy; 2024 The UW Dawgcast. All rights reserved.</p>
+            </footer>
+            <script>
+                // JavaScript to handle navigation
+                document.addEventListener('DOMContentLoaded', function () {
+                    const homeLink = document.getElementById('home-link');
+                    const aboutLink = document.getElementById('about-link');
+                    const meteorologyLink = document.getElementById('meteorology-link');
+                    const joinLink = document.getElementById('join-link');
+                    const forecastLink = document.getElementById('forecast-link');
+
+                    const sections = document.querySelectorAll('main section');
+
+                    // Function to show selected section and update active link
+                    function showSection(sectionId) {
+                        sections.forEach(section => {
+                            section.style.display = 'none';
+                        });
+                        document.getElementById(sectionId).style.display = 'block';
+
+                        // Update active link
+                        const activeLink = document.querySelector('nav a.active');
+                        if (activeLink) {
+                            activeLink.classList.remove('active');
+                        }
+                        const newActiveLink = document.getElementById(sectionId + '-link');
+                        if (newActiveLink) {
+                            newActiveLink.classList.add('active');
+                        }
+                    }
+
+                    // Event listeners for navigation links
+                    homeLink.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        showSection('home');
+                    });
+
+                    aboutLink.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        showSection('about');
+                    });
+
+                    meteorologyLink.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        showSection('meteorology');
+                    });
+
+                    joinLink.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        showSection('join');
+                    });
+
+                    forecastLink.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        showSection('forecast');
+                    });
+                });
+            </script>
+            </body>
+            </html>
